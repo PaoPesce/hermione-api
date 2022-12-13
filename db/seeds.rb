@@ -5,12 +5,10 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-puts "Destroying characters"
+puts 'Destroying characters'
 Character.destroy_all if Rails.env.development?
 
-puts "Creating characters"
-Character.create!(name: "Harry Potter", actor: "Daniel")
-
+puts 'Creating characters'
 Character.create(
   name: 'Severus Snape',
   review: 'Profesor de Artes oscuras. En el pasado fue aliado y fiel a Valdemort. Estudió con los padres de Harry.',
@@ -66,4 +64,3 @@ Character.create(
   actor: 'Richard Harris',
   image_url: 'https://res.cloudinary.com/abdulaba/image/upload/v1669900365/Harry/Harry-Potter__htwqje.jpg'
 )
-
