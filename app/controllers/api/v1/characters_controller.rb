@@ -19,7 +19,7 @@ class Api::V1::CharactersController < ApplicationController
     if character.save
       render json: character, status: 201
     else
-      render json: {status: 422, error: "Error creating the character" }, status: :unprocesable_entity
+      render json: { status: 422, error: 'Error creating the character' }, status: :unprocesable_entity
     end
   end
 
@@ -36,7 +36,7 @@ class Api::V1::CharactersController < ApplicationController
   def destroy
     if @character
       @character.destroy
-      render json: { message: 'Record deteted' }, status: 200
+      render json: { message: 'Record deleted' }, status: 200
     else
       render json: { status: 404, message: 'character not found' }, status: 404
     end
